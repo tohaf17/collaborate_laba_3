@@ -7,25 +7,6 @@ using System.Threading.Tasks;
 
 namespace Laba3
 {
-
-    public class Listtask3
-    {
-        public void Main2()
-        {
-            Write("\nInput the length");
-            int length = int.Parse(ReadLine());
-            List<int[]> list=new List<int[]>(length);
-            
-            for(int i = 0; i < length; i++)
-            {
-                list[i] =ConvertAll(ReadLine().Split(), int.Parse);
-            }
-        }
-        public void Minimum( )
-        {
-
-        }
-    }
     internal class Task3
     {
         public static int Minimum(int[][] array)
@@ -72,21 +53,9 @@ namespace Laba3
         }
         public static int[][] Main(int[][] array)
         {
-            WriteLine("\nChoose the array or list");
-            string chooce = ReadLine();
-            switch (chooce)
-            {
-                case "list":
-                    new Listtask3();
-                    break;
-                case "array":
-                    
-
-                    int arrayIndex = Minimum(array);
-                    Changing(array, arrayIndex);
-                    break;
-            }
-
+            
+            int arrayIndex = Minimum(array);
+            Changing(array, arrayIndex);
             return array;
         }
     }

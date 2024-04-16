@@ -68,7 +68,7 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public static void Main()
+        public void Main()
         {
             int[] linearArray;
             int[][] jaggedArray;
