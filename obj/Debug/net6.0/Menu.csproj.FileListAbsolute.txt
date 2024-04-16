@@ -2,3 +2,4 @@ C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\D
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.AssemblyInfoInputs.cache
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.AssemblyInfo.cs
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.csproj.CoreCompileInputs.cache
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.sourcelink.json
