@@ -91,7 +91,7 @@ namespace Laba3
                     UserInput(out firstL, out firstJ);
                     break;
             }
-            linearArray =firstL;jaggedArray=firstJ;
+            linearArray = firstL;jaggedArray=firstJ;
             string student;
             do
             {
