@@ -1,4 +1,5 @@
 ﻿using System;
+using Laba3;
 using static System.Console;
 using static System.Array;
 namespace Laba3
@@ -18,7 +19,7 @@ namespace Laba3
             }
 
             Write("\nInput the length of jagged array: ");
-            int lengthJaggedArray = int.Parse(ReadLine());
+            int lengthJaggedArray = int.Parse(ReadLine()); 
             jaggedArray = new int[lengthJaggedArray][];
 
             int max = int.MinValue;
@@ -72,24 +73,25 @@ namespace Laba3
             int[] linearArray;
             int[][] jaggedArray;
 
+            int[] firstL;
+            int[][] firstJ;
             WriteLine("To start working, please select the type of filling (random or user):");
             string filling = ReadLine();
             switch (filling)
             {
                 case "random":
-                    int max = RandomInput(out linearArray, out jaggedArray);
+                    int max = RandomInput(out firstL, out firstJ);
                     WriteLine("\nLinear array");
-                    WriteLine(string.Join(" ", linearArray));
+                    WriteLine(string.Join(" ", firstL));
 
                     WriteLine("\nJaggedArray");
-                    PrintJaggedArray(jaggedArray, max);
+                    PrintJaggedArray(firstJ, max);
                     break;
                 case "user":
-                    UserInput(out linearArray, out jaggedArray);
+                    UserInput(out firstL, out firstJ);
                     break;
-
-
             }
+            linearArray =firstL;jaggedArray=firstJ;
             string student;
             do
             {
@@ -104,16 +106,17 @@ namespace Laba3
                         switch (variant)
                         {
                             case "1":
-                                //linearArray=new Task1().Main(linearArray);
+                                
+                                linearArray=Task1.Main(linearArray);
                                 break;
                             case "2":
-                                //Task2
+                                Task2.Main();
                                 break;
                             case "3":
-                                //jaggedArray=new Task3().Main(jaggedArray);
+                                jaggedArray=Task3.Main(jaggedArray);
                                 break;
                             case "4":
-                                //jaggedArray=new Task4().Main(jaggedArray);
+                                jaggedArray=Task4.Main(jaggedArray);
                                 break;
                             case "end":
                                 break;

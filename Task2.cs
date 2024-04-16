@@ -8,12 +8,12 @@ using System.Threading.Tasks;
  
 namespace Laba3
 {
-    internal class Task2
+    partial class Task2
     {
-        public Dictionary<int, int[]> dictionary= new Dictionary<int, int[]>();
+        public static  Dictionary<int, int[]> dictionary= new Dictionary<int, int[]>();
         public delegate int[] DelegateOfFilling(int i, int length);
 
-        public int[] Upgrade(int i,int length)
+        public static int[] Upgrade(int i,int length)
         {
             int sum = SumOfDigits(i + 1);
             if (!dictionary.ContainsKey(sum))
@@ -34,7 +34,7 @@ namespace Laba3
             }
             return dictionary[sum];
         }
-        public int SumOfDigits(int i)
+        public static int SumOfDigits(int i)
         {
             int sum = 0;
             
@@ -47,7 +47,7 @@ namespace Laba3
             
         }
         
-        public int[] MultiplesOfNumber(int i, int length)
+        public static int[] MultiplesOfNumber(int i, int length)
         {
             int sum = SumOfDigits(i + 1);
                 int count = length / sum;
@@ -66,7 +66,7 @@ namespace Laba3
             return arrayI;
         }
 
-        public int[][] FillingOfArray(int n,int choice)
+        public static int[][] FillingOfArray(int n,int choice)
         {
             int[][] baseArray = new int[n][];
             DelegateOfFilling delegat= (choice==1)?new DelegateOfFilling(MultiplesOfNumber):new DelegateOfFilling(Upgrade);
@@ -76,12 +76,12 @@ namespace Laba3
             }
             return baseArray;
         }
-        public void PrintOfArray(int[][] array)
+        public static void PrintOfArray(int[][] array)
         {
             int row = 1;
             foreach (int[] d in array)
             {
-                Write($"Номер {row}    ");
+                Write($"Number {row}    ");
                 foreach (int i in d)
                 {
                     Write((i + " "));
@@ -91,7 +91,7 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public void Main()
+        public static void Main()
         {
             Write("\nInput the number: ");
             int inputNumber=int.Parse(ReadLine());

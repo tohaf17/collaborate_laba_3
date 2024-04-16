@@ -76,43 +76,9 @@ namespace Laba3
             }
         }
     }
-    internal class Task1
+    partial class Task1
     {
-        public static void RandomInput(int[] array, int n)
-        {
-            Random match = new Random();
-            for (int i = 0; i < n; i++)
-            {
-                array[i] = match.Next(0, n + 1);
-            }
-            WriteLine(Join(" ", array));
-        }
-        public static void UserInput(int[] array, int n)
-        {
-            string[] data = ReadLine().Split();
-            for (int i = 0; i < n; i++)
-            {
-                array[i] = int.Parse(data[i]);
-            }
-        }
-        public void Filling(int[] array, int n)
-        {
-            WriteLine("\nChoose the filling: ");
-            int choice = int.Parse(ReadLine());
-            switch (choice)
-            {
-                case 1:
-                    WriteLine("\nRandom input");
-                    RandomInput(array, n);
-                    break;
-                case 2:
-                    WriteLine("\nInput the numbers");
-                    UserInput(array, n);
-                    break;
-            }
-        }
-
-        public  (int[],int) Maximum(int[] array,int n)
+        public static  (int[],int) Maximum(int[] array,int n)
         {
             int count=0;
             int max = int.MinValue;
@@ -146,12 +112,12 @@ namespace Laba3
             }
             return (maxIdx,max);
         }
-        public bool IfEven(int n)
+        public static bool IfEven(int n)
         {
             return (n%2==0)?true: false;
         }
 
-        public bool IsIndexInTheArray(int i, int[] array)
+        public static bool IsIndexInTheArray(int i, int[] array)
         {
             for(int j = 0; j < array.Length; j++)
             {
@@ -162,7 +128,7 @@ namespace Laba3
             }
             return false;
         }
-        public int[] ChangingOfArray(int[] array, int[] indixes,int max)
+        public static int[] ChangingOfArray(int[] array, int[] indixes,int max)
         {
             int changeNumber=indixes.Length;
             int number = max / 2;
@@ -186,7 +152,7 @@ namespace Laba3
             }
             return newArray;
         }
-        public void Print(int[] array)
+        public static void Print(int[] array)
         {
             foreach(int i in array)
             {
@@ -194,27 +160,21 @@ namespace Laba3
             }
         }
         
-        public void Main()
+        public static int[] Main(int[] array)
         {
-            Write("Input the length of the array: ");
-            int n = int.Parse(ReadLine());
-            int[] array = new int[n];
+            int[] maxIdx =Maximum(array,array.Length).Item1;
+            int max =Maximum(array, array.Length).Item2;
 
-            Filling(array,n);
-
-            ImprovedTask1ThroughList list = new ImprovedTask1ThroughList();
-            int[] maxIdx =list.Maximum(array,n).Item1;
-            int max = list.Maximum(array, n).Item2;
-
-            if (list.IfEven(max))
+            if (IfEven(max))
             {
                 WriteLine("\nThe changed array: ");
-                list.Print(list.ChangingOfArray(array,maxIdx,max));
+                Print(ChangingOfArray(array,maxIdx,max));
             }
             else
             {
                 WriteLine("\nThe array is unchanged");
             }
+            return array;
         }
     }
 }

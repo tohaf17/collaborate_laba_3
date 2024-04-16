@@ -5,7 +5,7 @@ namespace Laba3
 {
     internal class Task4
     {
-        public int[][] FirstMatrix(int n, int m)
+        public static int[][] FirstMatrix(int n, int m)
         {
             int[][] array = new int[n][];
             Random match = new Random();
@@ -20,7 +20,7 @@ namespace Laba3
             return array;
         }
 
-        public void Print(int[][] array, int max)
+        public static void Print(int[][] array, int max)
         {
             string maxa = max.ToString();
             foreach (int[] arr in array)
@@ -33,7 +33,7 @@ namespace Laba3
             }
         }
 
-        public (int[][],int) SumMatrixes(int[][] first, int[][] second)
+        public static (int[][],int) SumMatrixes(int[][] first, int[][] second)
         {
             int rows = Math.Max(first.Length, second.Length);
             int[][] result = new int[rows][];
@@ -58,7 +58,7 @@ namespace Laba3
 
 
 
-        public void Main()
+        public static int[][] Main(int[][] second)
         {
             WriteLine("The first matrix will be generated randomly, but input the number of columns and rows");
             Write("\nRows: ");
@@ -68,19 +68,13 @@ namespace Laba3
             int[][] first = FirstMatrix(rowsFirst, columnsFirst);
             Print(first, rowsFirst * columnsFirst);
 
-            WriteLine("\nFor the second matrix please input the number of rows");
-            int rowsSecond = int.Parse(ReadLine());
-            int[][] second = new int[rowsSecond][];
-            WriteLine("\nPlease input");
-            for (int i = 0; i < rowsSecond; i++)
-            {
-                second[i] = Array.ConvertAll(ReadLine().Split(), int.Parse);
-            }
-
+            
             int[][] sum = SumMatrixes(first, second).Item1;
             int maxMatrix = SumMatrixes(first, second).Item2;
             WriteLine("\nResult:");
             Print(sum,maxMatrix);
+
+            return second;
         }
     }
 }

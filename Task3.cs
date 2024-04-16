@@ -28,38 +28,7 @@ namespace Laba3
     }
     internal class Task3
     {
-        public int[][] Filling()
-        {
-            WriteLine("\nEnter the number of arrays:");
-            int numberOfArrays = int.Parse(ReadLine());
-
-            int[][] jaggedArray = new int[numberOfArrays][];
-
-            for (int i = 0; i < numberOfArrays; i++)
-            {
-                WriteLine($"Enter the number of elements for array {i + 1}:");
-                int numberOfElements = int.Parse(ReadLine());
-                jaggedArray[i] = new int[numberOfElements];
-
-                WriteLine($"Enter {numberOfElements} elements for array {i + 1}:");
-                string[] data = ReadLine().Split();
-                for (int j = 0; j < numberOfElements; j++)
-                {
-                    jaggedArray[i][j] = int.Parse(data[j]);
-                }
-            }
-            WriteLine("\nJagged array:");
-            for (int i = 0; i < numberOfArrays; i++)
-            {
-                for (int j = 0; j < jaggedArray[i].Length; j++)
-                {
-                    Write(jaggedArray[i][j] + " ");
-                }
-                WriteLine();
-            }
-            return jaggedArray;
-        }
-        public int Minimum(int[][] array)
+        public static int Minimum(int[][] array)
         {
             int min = int.MaxValue;
             int arrayIndex = -1;
@@ -78,7 +47,7 @@ namespace Laba3
             }
             return arrayIndex;
         }
-        public void Changing(int[][] array,int indexOfArray)
+        public static void Changing(int[][] array,int indexOfArray)
         {
             int[] addedArray = new int[10] {0,6,3,6,4,7,4,7,2,9};
             Array.Resize(ref array, array.Length+1);
@@ -90,7 +59,7 @@ namespace Laba3
             WriteLine("\nNew jagged array");
             Print(array);
         }
-        public void Print(int[][] arrayJagged)
+        public static void Print(int[][] arrayJagged)
         {
             foreach (int[] arr in arrayJagged)
             {
@@ -101,7 +70,7 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public void Main()
+        public static int[][] Main(int[][] array)
         {
             WriteLine("\nChoose the array or list");
             string chooce = ReadLine();
@@ -111,14 +80,14 @@ namespace Laba3
                     new Listtask3();
                     break;
                 case "array":
-                    int[][] array = Filling();
+                    
 
                     int arrayIndex = Minimum(array);
                     Changing(array, arrayIndex);
                     break;
-            } 
-           
+            }
 
+            return array;
         }
     }
 }
