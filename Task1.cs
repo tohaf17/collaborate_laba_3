@@ -160,7 +160,7 @@ namespace Laba3
             }
         }
         
-        public static int[] Main(int[] array)
+        public int[] Main(int[] array)
         {
             int[] maxIdx =Maximum(array,array.Length).Item1;
             int max =Maximum(array, array.Length).Item2;

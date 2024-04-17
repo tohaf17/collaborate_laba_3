@@ -3,3 +3,13 @@ C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\D
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.AssemblyInfo.cs
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.csproj.CoreCompileInputs.cache
 C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.sourcelink.json
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\bin\Debug\net6.0\Menu.exe
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\bin\Debug\net6.0\Menu.deps.json
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\bin\Debug\net6.0\Menu.runtimeconfig.json
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\bin\Debug\net6.0\Menu.dll
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\bin\Debug\net6.0\Menu.pdb
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.dll
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\refint\Menu.dll
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.pdb
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\Menu.genruntimeconfig.cache
+C:\Users\Filip\OneDrive\Робочий стіл\ЧНУ\ПАЛМ\Laba3\Menu\obj\Debug\net6.0\ref\Menu.dll

@@ -68,13 +68,13 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public void Main()
+        public static void Main()
         {
             int[] linearArray;
             int[][] jaggedArray;
 
-            int[] firstL;
-            int[][] firstJ;
+            int[] firstL=null;
+            int[][] firstJ=null;
             WriteLine("To start working, please select the type of filling (random or user):");
             string filling = ReadLine();
             switch (filling)
@@ -107,16 +107,16 @@ namespace Laba3
                         {
                             case "1":
                                 
-                                linearArray=Task1.Main(linearArray);
+                                linearArray=new Task1().Main(linearArray);
                                 break;
                             case "2":
-                                Task2.Main();
+                                new Task2().Main();
                                 break;
                             case "3":
-                                jaggedArray=Task3.Main(jaggedArray);
+                                jaggedArray=new Task3().Main(jaggedArray);
                                 break;
                             case "4":
-                                jaggedArray=Task4.Main(jaggedArray);
+                                jaggedArray=new Task4().Main(jaggedArray);
                                 break;
                             case "end":
                                 break;

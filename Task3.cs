@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laba3
 {
-    internal class Task3
+    partial class Task3
     {
         public static int Minimum(int[][] array)
         {
@@ -51,7 +51,7 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public static int[][] Main(int[][] array)
+        public int[][] Main(int[][] array)
         {
             
             int arrayIndex = Minimum(array);

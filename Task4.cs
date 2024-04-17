@@ -3,7 +3,7 @@ using static System.Console;
 
 namespace Laba3
 {
-    internal class Task4
+    partial class Task4
     {
         public static int[][] FirstMatrix(int n, int m)
         {
@@ -23,6 +23,7 @@ namespace Laba3
         public static void Print(int[][] array, int max)
         {
             string maxa = max.ToString();
+            WriteLine("\n");
             foreach (int[] arr in array)
             {
                 foreach (int a in arr)
@@ -58,7 +59,7 @@ namespace Laba3
 
 
 
-        public static int[][] Main(int[][] second)
+        public int[][] Main(int[][] second)
         {
             WriteLine("The first matrix will be generated randomly, but input the number of columns and rows");
             Write("\nRows: ");

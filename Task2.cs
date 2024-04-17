@@ -91,7 +91,7 @@ namespace Laba3
                 WriteLine();
             }
         }
-        public static void Main()
+        public void Main()
         {
             Write("\nInput the number: ");
             int inputNumber=int.Parse(ReadLine());
