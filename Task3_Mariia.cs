@@ -1,6 +1,6 @@
 namespace Laba3
 {
-    internal class Program
+    internal class Task3_Mariia
     {
         static int[][] Task(int[][] array)
         {
