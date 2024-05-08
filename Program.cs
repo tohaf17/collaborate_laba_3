@@ -151,7 +151,7 @@ namespace Laba3
                         switch (variant)
                         {
                             case "1":
-                                //linearArray=new Task1().Main(linearArray);
+                                linearArray=new Task1_Maria().Main(linearArray);
                                 break;
                             case "2":
                                 //Task2
