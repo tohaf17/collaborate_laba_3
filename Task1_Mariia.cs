@@ -1,7 +1,7 @@
 using System;
 namespace Laba3
 {
-    internal class Task1_Maria
+    internal class Task1_Mariia
     {
         static int[] Task(int[] array)
         {
