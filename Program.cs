@@ -157,7 +157,7 @@ namespace Laba3
                                 //Task2
                                 break;
                             case "3":
-                                //jaggedArray=new Task3().Main(jaggedArray);
+                                jaggedArray=new Task3_Maria().Main(jaggedArray);
                                 break;
                             case "4":
                                 //jaggedArray=new Task4().Main(jaggedArray);
