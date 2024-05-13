@@ -129,13 +129,13 @@ namespace Laba3
                         switch (variant)
                         {
                             case "1":
-                                //linearArray=new Task1().Main(linearArray);
+                                linearArray = new Task1_Anna().Main(linearArray);
                                 break;
                             case "2":
                                 //Task2
                                 break;
                             case "3":
-                                //jaggedArray=new Task3().Main(jaggedArray);
+                                jaggedArray = new Task3_Anna().Main(jaggedArray);
                                 break;
                             case "4":
                                 //jaggedArray=new Task4().Main(jaggedArray);
