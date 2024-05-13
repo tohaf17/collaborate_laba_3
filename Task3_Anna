@@ -1,0 +1,91 @@
+using System;
+
+namespace Laba3
+{
+    internal class Task3_Anna
+    {
+        static int[][] ZadaniaMasiva(int line)
+        {
+            Console.WriteLine();
+            int[][] array = new int[line][];
+            Console.WriteLine("Введіть елементи масиву: ");
+            for (int i = 0; i < line; i++)
+            {
+                string[] data = Console.ReadLine().Trim().Split();
+                array[i] = new int[data.Length];
+                for (int j = 0; j < data.Length; j++)
+                {
+                    array[i][j] = int.Parse(data[j]);
+                }
+            }
+            Console.WriteLine("Введений масив: ");
+            PrintMasiv(array, line);
+            return array;
+        }
+
+        static int MaxElement(int line, int[][] array)
+        {
+            int max = int.MinValue;
+            int maxline = 0;
+            for (int i = 0; i < line; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    if (array[i][j] >= max)
+                    {
+                        max = array[i][j];
+                        maxline = i;
+                    }
+                }
+            }
+            return maxline;
+        }
+
+        static int[][] Vstavka(int line, ref int[][] array)
+        {
+            Console.WriteLine("Введіть елементи для вставки: ");
+            int max = MaxElement(line, array);
+            Array.Resize(ref array, line + 1);
+
+            for (int i = line; i > max; i--)
+            {
+                array[i] = array[i - 1];
+            }
+
+            string[] data = Console.ReadLine().Trim().Split();
+
+            array[max] = new int[data.Length];
+
+            for (int j = 0; j < data.Length; j++)
+            {
+                array[max][j] = int.Parse(data[j]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Отриманий результат: ");
+            PrintMasiv(array, line + 1);
+            return array;
+        }
+
+        static void PrintMasiv(int[][] array, int line)
+        {
+            for (int i = 0; i < line; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write(array[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public int[][] Main(int[][] array)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.Write("Задайте необхідну кількість рядків: ");
+            int line = int.Parse(Console.ReadLine());
+            array = ZadaniaMasiva(line);
+            array = Vstavka(line, ref array);
+            return array;
+        }
+    }
+}
