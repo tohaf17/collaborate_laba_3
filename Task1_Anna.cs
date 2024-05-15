@@ -29,7 +29,7 @@ namespace Laba3
             PrintMasiv(array);
             return array;
         }
-        public int[] Main(int[] masiv)
+        public int[] Main(int[] array)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.Write("Enter how many items to insert: ");
