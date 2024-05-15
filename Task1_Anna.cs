@@ -25,18 +25,18 @@ namespace Laba3
                 array[i + t - 1] = int.Parse(data[i]);
             }
             Console.WriteLine();
-            Console.Write("Кінцевий масив: ");
+            Console.Write("The final array: ");
             PrintMasiv(array);
             return array;
         }
         public int[] Main(int[] masiv)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Write("Введіть скільки елементів необхідно вставити: ");
+            Console.Write("Enter how many items to insert: ");
             int k = int.Parse(Console.ReadLine());
-            Console.Write("Починаючи з якого елемента необхідно виконати вставку: ");
+            Console.Write("Starting from which element should be inserted: ");
             int t = int.Parse(Console.ReadLine());
-            Console.Write("Введіть нові елементи: ");
+            Console.Write("Enter new items: ");
             array = Vstavka(k, t, ref array);
             return array;
         }
