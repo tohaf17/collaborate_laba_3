@@ -24,7 +24,7 @@ namespace Laba3
 
         static int[][] Vstavka(int line, ref int[][] array)
         {
-            Console.WriteLine("Введіть елементи для вставки: ");
+            Console.WriteLine("Enter the items to insert: ");
             int max = MaxElement(line, array);
             Array.Resize(ref array, line + 1);
 
@@ -42,7 +42,7 @@ namespace Laba3
                 array[max][j] = int.Parse(data[j]);
             }
             Console.WriteLine();
-            Console.WriteLine("Отриманий результат: ");
+            Console.WriteLine("The result obtained: ");
             PrintMasiv(array, line + 1);
             return array;
         }
