@@ -62,6 +62,7 @@ namespace Laba3
         public int[][] Main(int[][] array)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            int line = array.GetLength(0);
             array = Vstavka(line, ref array);
             return array;
         }
