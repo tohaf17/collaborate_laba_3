@@ -4,25 +4,6 @@ namespace Laba3
 {
     internal class Task3_Anna
     {
-        static int[][] ZadaniaMasiva(int line)
-        {
-            Console.WriteLine();
-            int[][] array = new int[line][];
-            Console.WriteLine("Введіть елементи масиву: ");
-            for (int i = 0; i < line; i++)
-            {
-                string[] data = Console.ReadLine().Trim().Split();
-                array[i] = new int[data.Length];
-                for (int j = 0; j < data.Length; j++)
-                {
-                    array[i][j] = int.Parse(data[j]);
-                }
-            }
-            Console.WriteLine("Введений масив: ");
-            PrintMasiv(array, line);
-            return array;
-        }
-
         static int MaxElement(int line, int[][] array)
         {
             int max = int.MinValue;
@@ -81,9 +62,6 @@ namespace Laba3
         public int[][] Main(int[][] array)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Write("Задайте необхідну кількість рядків: ");
-            int line = int.Parse(Console.ReadLine());
-            array = ZadaniaMasiva(line);
             array = Vstavka(line, ref array);
             return array;
         }
