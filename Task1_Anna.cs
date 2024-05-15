@@ -3,17 +3,6 @@ namespace Laba3
 {
     internal class Task1_Anna
     {
-        static int[] ZadaniaMasiva(int n)
-        {
-            int[] array = new int[n];
-            string[] data = Console.ReadLine().Trim().Split();
-
-            for (int i = 0; i < n; i++)
-            {
-                array[i] = int.Parse(data[i]);
-            }
-            return array;
-        }
         static void PrintMasiv(int[] array)
         {
             foreach (int elem in array)
@@ -43,12 +32,6 @@ namespace Laba3
         public int[] Main(int[] masiv)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Write("Введіть довжину масиву: ");
-            int n = int.Parse(Console.ReadLine());
-            int[] array = new int[n];
-            Console.Write("Введіть елементи масиву через пробіл: ");
-            array = ZadaniaMasiva(n);
-
             Console.Write("Введіть скільки елементів необхідно вставити: ");
             int k = int.Parse(Console.ReadLine());
             Console.Write("Починаючи з якого елемента необхідно виконати вставку: ");
