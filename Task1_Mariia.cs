@@ -1,6 +1,7 @@
-namespace ConsoleApp61
+using System;
+namespace Laba3
 {
-    internal class Program
+    internal class Task1_Mariia
     {
         static int[] Task(int[] array)
         {
@@ -42,15 +43,16 @@ namespace ConsoleApp61
             }
             return array;
         }
-        static void Main(string[] args)
+        public int[] Main(int[] array)
         {
             /*Знищити всі елементи з непарними індексами.*/
             Console.WriteLine("Please, input the size of the array: ");
             int size = int.Parse(Console.ReadLine());
-            int[] array = FillArray(size);
+            
             array = Task(array);
             Console.WriteLine("Answer: " + array.Length + " - Length");
             PrintArray(array);
+            return array;
         }
     }
 }

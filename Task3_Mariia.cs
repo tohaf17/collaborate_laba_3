@@ -1,6 +1,6 @@
-namespace ConsoleApp25
+namespace Laba3
 {
-    internal class Program
+    internal class Task3_Mariia
     {
         static int[][] Task(int[][] array)
         {
@@ -48,16 +48,15 @@ namespace ConsoleApp25
             }
             return array;
         }
-        static void Main(string[] args)
+        public int[][] Main(int[][] array)
         {
             /*Знищити рядок, в якому знаходиться найбільший елемент зубчастого масиву (якщо у різних місцях є
             кілька елементів з однаковим максимальним значенням, то лише перший з них).*/
             Console.Write("Please, input the number of arrays: ");
             int size = int.Parse(Console.ReadLine());
-            int[][] array = new int[size][];
-            array = FillArray(array);
             array = Task(array);
             PrintArray(array);
+            return array;
         }
     }
 }

@@ -61,7 +61,7 @@ namespace Laba3
 
         public int[][] Main(int[][] second)
         {
-            WriteLine("The first matrix will be generated randomly, but input the number of columns and rows");
+            WriteLine("\nThe first matrix will be generated randomly, but input the number of columns and rows");
             Write("\nRows: ");
             int rowsFirst = int.Parse(ReadLine());
             Write("\nColumns: ");
